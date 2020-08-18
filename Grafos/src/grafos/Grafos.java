@@ -23,7 +23,7 @@ public class Grafos {
     static ArrayList<int[]> aristasVertices = new ArrayList<int[]>();
     static int n;
     static int m;
-    
+    int matriz[][] = new int[n][m];
     
     public static void extraerDatos(){
         
