@@ -4,7 +4,10 @@
  * and open the template in the editor.
  */
 package grafos;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -23,7 +26,6 @@ public class Grafos {
     static ArrayList<int[]> aristasVertices = new ArrayList<int[]>();
     static int n;
     static int m;
-    int matriz[][] = new int[n][m];
     
     public static void extraerDatos(){
         
@@ -55,6 +57,7 @@ public class Grafos {
     public static void main(String[] args) {
         // TODO code application logic here
         extraerDatos();
+       
         
     }
     
