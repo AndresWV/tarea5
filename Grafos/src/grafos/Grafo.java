@@ -69,6 +69,10 @@ public class Grafo{
             System.out.println(x[0]+"  "+x[1]);
         }
     }
+    
+    public int cantidadVertices(){
+        return nodos.size();
+    }
    
     
     
