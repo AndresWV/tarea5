@@ -76,4 +76,19 @@ public class Grafo{
     
     
 
+    public int getMaxVertices() {
+        return maxVertices;
+    }
+
+    public int getMaxAristas() {
+        return maxAristas;
+    }
+
+    public int[][] getMatriz() {
+        return matriz;
+    }
+
+    public double getDensidad() {
+        return densidad;
+    }
 }
