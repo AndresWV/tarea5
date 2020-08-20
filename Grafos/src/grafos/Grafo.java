@@ -73,22 +73,13 @@ public class Grafo{
     public int cantidadVertices(){
         return nodos.size();
     }
-   
-    
-    
-    
-    
-    
 
     public int getMaxVertices() {
         return maxVertices;
     }
 
-    public int getMaxAristas() {
-        return maxAristas;
-    }
 
-    public int[][] getMatriz() {
+    public double[][] getMatriz() {
         return matriz;
     }
 

@@ -17,8 +17,10 @@ public class Grafos {
     
     public static void main(String[] args) {
         // TODO code application logic here
-        Grafo grafo = new Grafo(3, 1.0);
+        Grafo grafo = new Grafo(5, 1.0);
         grafo.inicializarMatriz();
+        Dijkstra dijkstra = new Dijkstra();
+        dijkstra.iniciarDijkstra(grafo, 1);
         grafo.mostrarNodos();
         grafo.mostrarAristas();
     }

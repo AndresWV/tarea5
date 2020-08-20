@@ -1,12 +1,12 @@
 package grafos;
 
 
-public class dijkstra{
+public class Dijkstra {
 
     public void iniciarDijkstra(Grafo grafo, int nodoInicio){
         int n = grafo.cantidadVertices();
         boolean[] R = new boolean[n];
-        int[] sp = new int[n];
+        double[] sp = new double[n];
         int[] from = new int[n];
 
         for (int i = 0; i < n-1; i++) {
@@ -20,7 +20,7 @@ public class dijkstra{
             int u2 = distanciaMinima(sp, R, n);
             R[u2] = true;
 
-            for (int j = 0; j < n; j++) {
+            for (int j = 0; j < n-1; j++) {
                 if (!R[j] && grafo.getMatriz()[u2][j] != 0 &&
                         sp[u2] != Integer.MAX_VALUE && sp[u2] + grafo.getMatriz()[u2][j] < sp[j]) {
                     sp[j] = sp[u2] + grafo.getMatriz()[u2][j];
@@ -33,9 +33,10 @@ public class dijkstra{
 
     }
 
-    int distanciaMinima(int[] sp, boolean[] sptSet, int n)
+    int distanciaMinima(double[] sp, boolean[] sptSet, int n)
     {
-        int min = Integer.MAX_VALUE, min_index = -1;
+        double min = Integer.MAX_VALUE;
+        int min_index = -1;
 
         for (int v = 0; v < n; v++)
             if (!sptSet[v] && sp[v] <= min) {
